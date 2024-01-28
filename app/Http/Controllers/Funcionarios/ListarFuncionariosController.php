@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Funcionarios;
 
+use App\Http\Controllers\Controller;
 use App\Models\Cargo;
 use App\Models\Departamento;
 use App\Models\Funcionario;
