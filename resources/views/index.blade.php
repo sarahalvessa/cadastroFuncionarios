@@ -10,7 +10,7 @@
 <div>
     <h1>Bem-vindo ao RHInTouch</h1>
     <p>Por favor, faça login para continuar.</p>
-    <a href="{{ route('funcionarios.login.index') }}">Login</a>
+    <a href="{{ route('funcionarios.login.create') }}">Login</a>
 </div>
 </body>
 </html>

@@ -54,7 +54,7 @@
                     <td>{{ $funcionariosDepartamento->created_at }}</td>
                     <td>{{ $funcionariosDepartamento->updated_at }}</td>
                     <td>
-                        <a href="{{ route('funcionarios.edit', $funcionariosDepartamento->func_id) }}" class="btn btn-warning">
+                        <a href="{{ route('funcionarios.editar.edit', $funcionariosDepartamento->func_id) }}" class="btn btn-warning">
                             <i class="fas fa-edit"></i>
                         </a>
                         <form action="{{ route('funcionarios.destroy', $funcionariosDepartamento->func_id) }}" method="POST" style="display: inline-block;">
@@ -97,10 +97,10 @@
                     <td>{{ $funcionario->created_at }}</td>
                     <td>{{ $funcionario->updated_at }}</td>
                     <td>
-                        <a href="{{ route('funcionarios.edit', $funcionario->func_id) }}" class="btn btn-warning">
+                        <a href="{{ route('funcionarios.editar.edit', $funcionario->func_id) }}" class="btn btn-warning">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <form action="{{ route('funcionarios.destroy', $funcionario->func_id) }}" method="POST" style="display: inline-block;">
+                        <form action="{{ route('funcionarios.deletar.destroy', $funcionario->func_id) }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir esse funcionário?')">
@@ -112,7 +112,7 @@
             @endforeach
             </tbody>
         </table>
-        <a href="{{ route('funcionarios.create') }}" class="btn btn-success">Adicionar</a>
+        <a href="{{ route('funcionarios.cadastrar.create') }}" class="btn btn-success">Adicionar</a>
     @endif
 </div>
 <script src="{{ asset('lib/js/bootstrap.js') }}"></script>

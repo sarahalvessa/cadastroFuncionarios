@@ -19,7 +19,7 @@
                     <h1 class="mb-0">Editar Funcionário</h1>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('funcionarios.update', $funcionarios->func_id) }}" method="POST">
+                    <form action="{{ route('funcionarios.editar.update', $funcionarios->func_id) }}" method="POST">
                         @csrf
                         @method('PUT')
 

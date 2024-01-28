@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Funcionarios;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class LoginFuncionariosController
 {
@@ -25,18 +24,11 @@ class LoginFuncionariosController
      */
     public function create()
     {
-        return "";
+        return view('login_funcionarios');
     }
 
     public function store(Request $request): void
     {
         print_r($request->all());
-
-        $credentials = $request->only('email', 'password');
-
-        // Verificar se o usuário existe no banco de dados
-        if (Auth::validate($credentials)) {
-            echo 'usuario autenticado';
-        }
     }
 }
