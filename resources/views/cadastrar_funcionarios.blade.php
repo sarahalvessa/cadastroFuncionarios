@@ -17,7 +17,7 @@
                     <h1 class="mb-0">Cadastrar Funcionários</h1>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('funcionarios.store') }}" method="post">
+                    <form action="{{ route('funcionarios.cadastrar.store') }}" method="post">
                         @csrf
 
                         <div class="form-group">
