@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Funcionarios;
 
-use App\Http\Controllers\Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginFuncionariosController
 {
@@ -16,4 +17,26 @@ class LoginFuncionariosController
         return view('login_funcionarios');
     }
 
+
+    /**
+     * Exibe o formulário para criar um novo recurso.
+     *
+     * @return string
+     */
+    public function create()
+    {
+        return "";
+    }
+
+    public function store(Request $request): void
+    {
+        print_r($request->all());
+
+        $credentials = $request->only('email', 'password');
+
+        // Verificar se o usuário existe no banco de dados
+        if (Auth::validate($credentials)) {
+            echo 'usuario autenticado';
+        }
+    }
 }

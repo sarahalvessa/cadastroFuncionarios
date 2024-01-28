@@ -67,10 +67,11 @@ class ListarFuncionariosController extends Controller
     {
         $request->validate([
             'nome' => 'required|string|max:255',
+            'email' => 'required|string|max:255',
+            'password' => 'required|string|max:255',
             'data_nascimento' => 'required|date',
             'cargo_id' => 'required|exists:cargos,cargo_id',
         ]);
-
         Funcionario::create($request->all());
         return redirect()->route('funcionarios.index');
     }

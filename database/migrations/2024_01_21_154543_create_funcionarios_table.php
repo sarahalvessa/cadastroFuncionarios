@@ -11,11 +11,12 @@ return new class extends Migration
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->id('func_id');
             $table->string('nome');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->date('data_nascimento');
             $table->unsignedBigInteger('cargo_id');
             $table->timestamps();
             $table->tinyInteger('deleted_at')->default(0);
-
             $table->foreign('cargo_id')->references('cargo_id')->on('cargos');
         });
     }
