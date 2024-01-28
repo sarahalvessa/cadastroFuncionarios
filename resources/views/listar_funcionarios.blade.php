@@ -33,6 +33,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
+                <th>Email</th>
                 <th>Data de Nascimento</th>
                 <th>Cargo</th>
                 <th>Departamento</th>
@@ -46,6 +47,7 @@
                 <tr>
                     <td>{{ $funcionariosDepartamento->func_id }}</td>
                     <td>{{ $funcionariosDepartamento->nome }}</td>
+                    <td>{{ $funcionariosDepartamento->email }}</td>
                     <td>{{ $funcionariosDepartamento->data_nascimento }}</td>
                     <td>{{ $funcionariosDepartamento->cargo->nome }}</td>
                     <td>{{ $funcionariosDepartamento->cargo->departamento->nome }}</td>
@@ -74,6 +76,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
+                <th>Email</th>
                 <th>Data de Nascimento</th>
                 <th>Cargo</th>
                 <th>Departamento</th>
@@ -87,6 +90,7 @@
                 <tr>
                     <td>{{ $funcionario->func_id }}</td>
                     <td>{{ $funcionario->nome }}</td>
+                    <td>{{ $funcionario->email }}</td>
                     <td>{{ $funcionario->data_nascimento }}</td>
                     <td>{{ $funcionario->cargo->nome }}</td>
                     <td>{{ $funcionario->cargo->departamento->nome }}</td>

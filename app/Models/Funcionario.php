@@ -9,7 +9,7 @@ class Funcionario extends Model
 {
     protected $table = 'funcionarios';
     protected $primaryKey = 'func_id';
-    protected $fillable = ['nome', 'data_nascimento', 'cargo_id'];
+    protected $fillable = ['nome', 'email', 'password', 'data_nascimento', 'cargo_id'];
     public $timestamps = true;
 
     public function cargo(): BelongsTo

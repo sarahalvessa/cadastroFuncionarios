@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ping', function () {
     return 'pong';
 });
+
 Route::get('/', [IndexController::class, 'index'])->name('index.index');
 
 Route::prefix('/funcionarios')->namespace('Funcionarios')->group(function () {
     Route::group(['prefix' => '/login'], function () {
         Route::get('/index', [LoginFuncionariosController::class, 'index'])->name('funcionarios.login.index');
+        Route::get('/create', [LoginFuncionariosController::class, 'create'])->name('funcionarios.login.create');
+        Route::post('/store', [LoginFuncionariosController::class, 'store'])->name('funcionarios.login.store');
     });
 
     Route::group(['prefix' => '/listar'], function () {

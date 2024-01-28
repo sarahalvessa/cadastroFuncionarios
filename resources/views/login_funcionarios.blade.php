@@ -9,10 +9,10 @@
 <body>
 <div>
     <h1>Login</h1>
-    <form action="/processar-login" method="post">
+    <form action="{{ route('funcionarios.login.store') }}" method="post">
         @csrf
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
 
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
